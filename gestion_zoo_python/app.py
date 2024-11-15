@@ -1,43 +1,33 @@
-# Importation des classes définies dans d'autres fichiers
+# Importation des classes nécessaires
 from zoo import Zoo
+from animal import Lion, Gazelle, Hyene
 from cage import Cage
-from animal import Lion, Gazelle, Hyene, Serpent
 
-# Fonction principale pour exécuter le programme
-def main():
-    # Création d'une instance de Zoo
-    zoo = Zoo()
+# Création d'instances d'animaux
+lion1 = Lion("Simba")
+gazelle1 = Gazelle("Gazou")
+hyene1 = Hyene("Shenzi")
 
-    # Création de quelques cages
-    cage1 = Cage()
-    cage2 = Cage()
+# Création d'une cage et ajout des animaux
+cage1 = Cage()
+cage1.ajouter_animal(lion1)
+cage1.ajouter_animal(gazelle1)
+cage1.ajouter_animal(hyene1)
 
-    # Ajout des cages au zoo
-    zoo.ajouter_cage(cage1)
-    zoo.ajouter_cage(cage2)
+# Liste des animaux dans la cage
+print("Liste des animaux avant la prédation :")
+cage1.lister_animaux()
 
-    # Affichage du nombre de cages dans le zoo
-    zoo.afficher_cages()
+# Vérification des interactions prédateur/proie
+print("\nVérification des interactions prédateur/proie :")
+cage1.verifier_predation()
 
-    # Ajout d'animaux dans la première cage
-    lion = Lion("Simba")
-    gazelle = Gazelle("Gazou")
-    hyene = Hyene("Scar")
-    
-    # Ajout de ces animaux dans la cage 1
-    cage1.ajouter_animal(lion)
-    cage1.ajouter_animal(gazelle)
-    cage1.ajouter_animal(hyene)
+# Liste des animaux après la prédation
+print("\nListe des animaux après la prédation :")
+cage1.lister_animaux()
 
-    # Ajout d'un serpent dans la deuxième cage
-    serpent = Serpent("Kaa")
-    cage2.ajouter_animal(serpent)
-
-    # Affichage des animaux présents dans chaque cage
-    print("\nListe des animaux dans chaque cage :")
-    zoo.afficher_cages()
-
-# Point d'entrée du programme
-if __name__ == "__main__":
-    # Appel de la fonction principale pour démarrer l'application
-    main()
+# Nourrissage des animaux
+print("\nNourrissage des animaux :")
+lion1.nourrir("viande")
+gazelle1.nourrir("plantes")
+hyene1.nourrir("plantes")  # Cette ligne devrait indiquer un mauvais choix de nourriture

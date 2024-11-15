@@ -1,41 +1,43 @@
-# Définition de la classe de base Animal
 class Animal:
-    # Constructeur pour initialiser un objet Animal
-    def __init__(self, nom, espece):
-        # Attribut pour stocker le nom de l'animal
-        self.nom = nom
-        # Attribut pour stocker l'espèce de l'animal
-        self.espece = espece
+    def __init__(self, nom):
+        self.nom = nom  # Nom de l'animal
+        self.espece = self.__class__.__name__  # Espèce basée sur le nom de la classe (Lion, Gazelle, etc.)
 
-    # Méthode spéciale pour retourner une chaîne représentant l'objet
     def __str__(self):
-        # Retourne le nom et l'espèce de l'animal
-        return f"{self.nom} ({self.espece})"
+        return f"{self.espece} ({self.nom})"
 
-# Sous-classe de Animal pour représenter un lion
+    def nourrir(self, aliment):
+        raise NotImplementedError("Cette méthode doit être implémentée par les sous-classes.")
+
 class Lion(Animal):
-    # Constructeur de la classe Lion
     def __init__(self, nom):
-        # Appelle le constructeur de la classe parente avec "Lion" comme espèce
-        super().__init__(nom, "Lion")
+        super().__init__(nom)
+        self.regime = "carnivore"
 
-# Sous-classe de Animal pour représenter une gazelle
+    def nourrir(self, aliment):
+        if aliment == "viande":
+            print(f"{self.nom} le {self.espece} a été nourri avec de la viande.")
+        else:
+            print(f"{self.nom} le {self.espece} ne mange pas cet aliment.")
+
 class Gazelle(Animal):
-    # Constructeur de la classe Gazelle
     def __init__(self, nom):
-        # Appelle le constructeur de la classe parente avec "Gazelle" comme espèce
-        super().__init__(nom, "Gazelle")
+        super().__init__(nom)
+        self.regime = "herbivore"
 
-# Sous-classe de Animal pour représenter une hyène
+    def nourrir(self, aliment):
+        if aliment == "plantes":
+            print(f"{self.nom} la {self.espece} a été nourrie avec des plantes.")
+        else:
+            print(f"{self.nom} la {self.espece} ne mange pas cet aliment.")
+
 class Hyene(Animal):
-    # Constructeur de la classe Hyène
     def __init__(self, nom):
-        # Appelle le constructeur de la classe parente avec "Hyène" comme espèce
-        super().__init__(nom, "Hyène")
+        super().__init__(nom)
+        self.regime = "omnivore"
 
-# Sous-classe de Animal pour représenter un serpent
-class Serpent(Animal):
-    # Constructeur de la classe Serpent
-    def __init__(self, nom):
-        # Appelle le constructeur de la classe parente avec "Serpent" comme espèce
-        super().__init__(nom, "Serpent")
+    def nourrir(self, aliment):
+        if aliment in ["viande", "plantes"]:
+            print(f"{self.nom} la {self.espece} a été nourrie avec {aliment}.")
+        else:
+            print(f"{self.nom} la {self.espece} ne mange pas cet aliment.")
