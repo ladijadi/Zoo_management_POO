@@ -3,14 +3,23 @@
 Gestionnaire de Zoo est une application en ligne de commande qui permet de simuler la gestion d'un zoo en utilisant la Programmation Orientée Objet (POO). Cette application offre des fonctionnalités pour ajouter des cages, gérer des animaux et visualiser le contenu du zoo.
 
 ## Table des matières
+
 Présentation du projet
+
 Fonctionnalités
+
 Technologies utilisées
+
 Installation
+
 Utilisation
+
 Structure des fichiers
+
 Améliorations futures
+
 Contribuer
+
 Licence
 
 ## Présentation du projet
