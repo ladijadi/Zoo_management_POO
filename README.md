@@ -39,7 +39,7 @@ Installation
 ## Utilisation
 Pour exécuter le programme, lancez le script principal :
 
-python app.py
+                 python app.py
 
 ## Structure des fichiers
 
@@ -61,6 +61,7 @@ Système de sauvegarde : Implémenter un système pour sauvegarder l'état du zo
 Statistiques avancées : Intégrer des statistiques sur les animaux et les cages.
 
 ## Licence
+
 Ce projet est sous licence MIT.
 
 Cela devrait te donner une base solide pour ton README. Tu pourras l'adapter au fur et à mesure que ton projet évolue.
