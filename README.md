@@ -4,21 +4,7 @@ Gestionnaire de Zoo est une application en ligne de commande qui permet de simul
 
 ## Table des matières
 
-Présentation du projet
-
-Fonctionnalités
-
-Technologies utilisées
-
-Installation
-
-Utilisation
-
-Structure des fichiers
-
-Améliorations futures
-
-Licence
+Présentation du projet | Fonctionnalités | Technologies utilisées | Installation | Utilisation | Structure des fichiers | Améliorations futures | Licence
 
 ## Présentation du projet
 Gestionnaire de Zoo est conçu pour permettre aux utilisateurs de gérer un zoo virtuel. Le projet met en pratique les concepts de POO, tels que l'encapsulation, l'héritage et le polymorphisme, pour structurer le code de manière efficace. Les utilisateurs peuvent ajouter des cages, insérer des animaux dans les cages et consulter la liste des animaux présents.
@@ -43,8 +29,7 @@ Paradigme : Programmation Orientée Objet (POO)
 
 Installation
 
-Cloner le dépôt : git clone https://github.com/votre-nom-utilisateur/gestionnaire-de-zoo.git
-
+                  Cloner le dépôt : git clone https://github.com/votre-nom-utilisateur/gestionnaire-de-zoo.git
                   cd gestionnaire-de-zoo
                   Créer un environnement virtuel et l'activer : python3 -m venv venv
                                                                 source venv/bin/activate  # Sur Windows, utilisez venv\Scripts\activate
@@ -58,7 +43,7 @@ python app.py
 
 ## Structure des fichiers
 
-    gestionnaire-de-zoo/│
+         gestionnaire-de-zoo/│
          ├── animal.py          # Définition de la classe Animal et ses sous-classes
          ├── cage.py            # Classe Cage, gestion des animaux dans une cage
          ├── zoo.py             # Classe Zoo, gestion globale du zoo
