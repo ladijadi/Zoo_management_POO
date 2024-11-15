@@ -63,5 +63,3 @@ Statistiques avancées : Intégrer des statistiques sur les animaux et les cages
 ## Licence
 
 Ce projet est sous licence MIT.
-
-Cela devrait te donner une base solide pour ton README. Tu pourras l'adapter au fur et à mesure que ton projet évolue.
