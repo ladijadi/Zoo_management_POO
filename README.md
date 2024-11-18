@@ -43,13 +43,16 @@ Pour exécuter le programme, lancez le script principal :
 
 ## Structure des fichiers
 
-         gestionnaire-de-zoo/│
-         ├── animal.py          # Définition de la classe Animal et ses sous-classes
-         ├── cage.py            # Classe Cage, gestion des animaux dans une cage
-         ├── zoo.py             # Classe Zoo, gestion globale du zoo
-         ├── app.py            # Script principal pour exécuter le programme
-         ├── requirements.txt   # Liste des dépendances (si nécessaire)
-         └── README.md          # Documentation du projet
+                        zoo_management_poo/
+                        │
+                        ├── animal.py         # Classe Animal
+                        ├── cage.py           # Classe Cage
+                        ├── zoo.py            # Classe Zoo, gestion des cages et des animaux
+                        ├── lion.py           # Classe Lion (extension de Animal)
+                        ├── gazelle.py        # Classe Gazelle (extension de Animal)
+                        ├── hyene.py          # Classe Hyène (extension de Animal)
+                        └── main.py           # Code principal (interface utilisateur)
+
 
 
 ## Améliorations futures
